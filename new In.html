@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport">
+<meta name="description" content="Discover the perfect gift at Selena Accessories. From sparkling earrings and rings to classic watches, find exquisite jewelry for every occasion.">
+<meta name="keywords" content="Selena Accessories, gift ideas, fine jewelry, statement necklaces, luxury watches, jewelry store, rings and bracelets">
+<title>New In | Selena Accessories</title>
+
+<style>
+/* COLORS */
+:root{
+    --primary-gold:#c5a059;
+    --dark:#0f172a;
+    --white:#ffffff;
+    --soft:#fdfaf5;
+}
+
+/* BODY */
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background:#c4A484; 
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:#f5efe2;
+    padding:40px;
+    text-align:center;
+}
+header h1{
+    font-size:45px;
+    letter-spacing:8px;
+    color:#111;
+    margin: 0;
+}
+
+/* NAV */
+nav{
+    background:#fffde4;
+    padding:15px;
+    text-align:center;
+}
+nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#111;
+    font-size:13px;
+    letter-spacing:1px;
+}
+nav a:hover{
+    color:var(--primary-gold);
+}
+
+/* --- ADDED: POPULAR CATEGORIES --- */
+.popular-categories {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+.popular-categories h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.cat-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.cat-item {
+    text-align: center;
+    width: 120px;
+}
+.cat-item .img-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f9f9f9;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+.cat-item img {
+    width: 100%;
+    height: auto;
+}
+.cat-item p {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+.cat-item span {
+    font-size: 11px;
+    color:black;
+}
+/* BUTTON */
+
+.add{
+margin-top:10px;
+background:#e2ceb1;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius: 50px;
+}
+
+.add:hover{
+background:var(--gold);
+}
+
+/* --- ADDED: PROMO BANNERS --- */
+.promo-banners {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+.banner {
+    background: #f4efeb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    overflow: hidden;
+}
+.banner-text {
+    text-align: left;
+}
+.banner-text span {
+    font-size: 12px;
+    color: #070707;
+    text-transform: uppercase;
+}
+.banner-text h3 {
+    font-size: 24px;
+    margin: 10px 0 20px;
+    font-weight: 500;
+}
+.banner-text a {
+    color: #111;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+}
+.banner img {
+    width: 150px;
+    height: auto;
+}
+
+/* FILTER */
+.filter{
+    text-align:center;
+    margin: 50px 0 20px;
+}
+.filter h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+/* GRID & CARD */
+.cat-item .img-circle {
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    overflow: hidden; 
+    border: 2px solid transparent;
+}
+
+.cat-item:hover .img-circle {
+    transform: translateY(-10px); 
+    border-color: var(--gold); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+.cat-item img {
+    transition: transform 0.4s ease;
+}
+
+.cat-item:hover img {
+    transform: scale(1.1); 
+}
+
+.cat-item button, .cat-item .order-btn {
+    background: #e2ceb1;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.cat-item button:hover {
+    background: var(--gold); 
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4); 
+}
+
+
+.cat-item p {
+    display: inline-block; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.cat-item:hover p {
+    color: #ffffff; 
+    transform: translateY(-5px); 
+}
+
+.grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    align-items: start; 
+}
+
+.card {
+    background: white;
+    text-align: center;
+    border: 1px solid #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    background: #f9f9f9;
+}
+
+.info {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info h3 {
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.price {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.info {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info h3 {
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.price {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* FOOTER */
+footer{
+    background:#f5efe2;
+    text-align:center;
+    padding:60px 20px;
+    margin-top: 50px;
+}
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-section h4, .quick h4 { color: black; margin-bottom: 20px; }
+.footer-section p, .lin a { color: black; font-size: 14px; text-decoration: none; line-height: 1.8; }
+.social-links a { text-decoration:none; margin:10px; color:#111; }
+.lin a { display: block; }
+.copyright{ margin-top:40px; font-size:12px; color: black }
+.designer {
+    font-size: 12px; 
+    margin-top: 5px;  
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Selena ACCESSORIES</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="new In.html">New In</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="popular-categories">
+    <h2>Popular Categories</h2>
+    <div class="cat-grid">
+        <div class="cat-item">
+            <div class="img-circle"><a href="rings.html"><img src="8d67105fbc2da1f4de9a3e70e1b66535.jpg" alt="Rings"></a></div>
+            <p>Rings</p><span>(17 Items)</span>
+            
+        </div>
+        <div class="cat-item">
+            <div class="img-circle"><a href="earrings.html"><img src="48941b9819b0ea464b1530f20aa01d9e.jpg" alt="Earrings"></a></div>
+            <p>Earrings</p><span>(8 Items)</span>
+            
+        </div>
+        <div class="cat-item">
+            <div class="img-circle"><a href="necklaces.html" ><img src="2100b46f6755cd7cdefc99972e2e1f55.jpg" alt="Necklaces"></a></div>
+            <p>Necklaces</p><span>(8 Items)</span>
+           
+        </div>
+        <div class="cat-item">
+            <div class="img-circle"><a href="bracelet.html"><img src="29ac123e8d2961d90a9c6e91e0b7faa5.jpg" alt="Bracelets"></a></div>
+            <p>Bracelets</p><span>(8 Items)</span>
+          
+        </div>
+        <div class="cat-item">
+            <div class="img-circle"><a href="watch.html"><img src="27be53fa617703411bd11927fd6736d6.jpg" alt="Watches"></a></div>
+            <p>Watches</p><span>(8 Items)</span>
+            
+        </div>
+    </div>
+</section>
+
+<section class="promo-banners">
+    <div class="banner">
+        <div class="banner-text">
+            <span>Collection 2026</span>
+            <h3>Floral & Butterfly<br>Pendant</h3>
+            <a href="order.html">SHOP NOW</a>
+        </div>
+        <img src="15e48c562575f0e0e9decefa6ab1ba9e.jpg" alt="Pendant">
+    </div>
+    <div class="banner">
+        <div class="banner-text">
+            <span>Special Offer</span>
+            <h3>Best Gold Filled<br>Bracelet</h3>
+            <a href="order.html">SHOP NOW</a>
+        </div>
+        <img src="25c691f3f6e8c473c7ba674b666e5386.jpg" alt="Bracelet">
+    </div>
+</section>
+
+<div class="filter">
+    <h2>Trending Products</h2>
+    
+</div>
+
+<div class="grid">
+    <div class="card">
+        <img src="9a22f028dfe23211fe651965f9d9fa6c.jpg" alt="p1">
+        <div class="info">
+            <h3>Luxury Diamond Ring</h3>
+            <p class="price">250,000 MMK</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="acf9fa04c20b208686925017ea24def4.jpg" alt="p2">
+        <div class="info">
+            <h3>Elegant Pearl Necklace</h3>
+            <p class="price">180,000 MMK</p>
+        </div>
+    </div>
+
+    </div>
+
+<footer>
+<div class="footer-content">
+
+<div class="footer-section">
+<h4>Selena Accessories</h4>
+<p>Explore our collection of premium jewelry, thoughtfully designed to reflect elegance, beauty, and your unique style.</p>
+</div>
+
+<div class="footer-section">
+<h4>Contact Info</h4>
+<p>Dawei, Myanmar<br>
+Phone: 09 123 456 789<br>
+info@SelenaAccessories.com</p>
+</div>
+<div class="quick">
+    <h4>Quick Link</h4>
+    <div class="lin">
+        <a href="index.html">Home</a>
+        <a href="new In.html">New In</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+<div class="footer-section">
+<h4>Follow Our Journey</h4>
+<div class="social-links">
+<a href="https://www.facebook.com/share/17s2pwzyrR/?mibextid=wwXIfr">Facebook</a>
+<a href="https://www.tiktok.com/@zinpyaelin?is_from_webapp=1&sender_device=pc">TikTok</a>
+<a href="https://www.pinterest.com/">Pinterest</a>
+</div>
+</div>
+
+</div>
+<div class="copyright"> © 2026 Selena Accessories </div>
+<p class="designer">Designed by Zin Pyae Lin</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport">
+<meta name="description" content="Discover the perfect gift at Selena Accessories. From sparkling earrings and rings to classic watches, find exquisite jewelry for every occasion.">
+<meta name="keywords" content="Selena Accessories, gift ideas, fine jewelry, statement necklaces, luxury watches, jewelry store, rings and bracelets">
+<title>LUXE | Fancy Accessories</title>
+<style>
+/* Luxury Accessories Color Theme */
+:root{
+    --primary-gold:#c5a059;
+    --dark-bg:#0f172a;
+    --soft-white:#ffffff;
+    --product-bg:#fdfaf5;
+    --img-bg:#f5efe2;
+}
+
+/* BODY BACKGROUND */
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background-color:#c4A484;
+    color:white;
+}
+
+/* Top Bar */
+.top-bar{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-size:12px;
+}
+
+/* HEADER */
+header{
+    background:#f5efe2;
+    padding:40px;
+    text-align:center;
+}
+header h1{
+    font-size:45px;
+    letter-spacing:8px;
+    color:#111;
+}
+header p{
+    color:var(--primary-gold);
+}
+
+/* NAVBAR */
+nav{
+    background:#fffde4;
+    padding:15px;
+    text-align:center;
+}
+nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#111;
+    font-size:13px;
+    letter-spacing:1px;
+}
+nav a:hover{
+    color:var(--primary-gold);
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+    text-align:center;
+}
+.container h2{
+    color:white;
+}
+
+/* PRODUCT GRID */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* PRODUCT CARD */
+.product-card{
+    background:var(--product-bg);
+    border-radius:10px;
+    padding:10px;
+    margin: 10px;
+    transition:0.4s;
+}
+.product-card:hover{
+    transform:translateY(-6px);
+}
+
+/* IMAGE CONTAINER */
+.img-container{
+    background:var(--img-bg);
+    padding:20px;
+}
+.product-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+/* TEXT */
+.product-card h3{
+    color:#222;
+}
+.price{
+    color:var(--primary-gold);
+    font-weight:bold;
+}
+
+/* BUTTON */
+.buy-btn{
+    background:#e2ceb1;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+    border-radius: 50px;
+}
+.buy-btn:hover{
+    background:var(--primary-gold);
+}
+/* discount */
+.discount{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background: #f4f0EF;;
+    margin:40px 0;
+    padding:40px;
+    border-radius:10px;
+}
+
+.discount img{
+    width:45%;
+    border-radius:10px;
+}
+
+.discount-text{
+    width:50%;
+    color: gray;
+}
+
+.discount-text h1{
+    font-family:serif;
+    color:var(--primary-gold);
+    font-size:40px;
+}
+
+.btn{
+    background:var(--gold);
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;}
+
+/* FOOTER */
+footer{
+    background:#f5efe2;
+    text-align:center;
+    padding:60px 20px;
+}
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+}
+.footer-section h4, .quick h4 { color: black; margin-bottom: 20px; }
+.footer-section p, .lin a { color: black; font-size: 14px; text-decoration: none; line-height: 1.8; }
+.social-links a { text-decoration:none; margin:10px; color:#111; }
+.lin a { display: block; }
+.copyright{ margin-top:40px; font-size:12px; color: black }
+.designer {
+    font-size: 12px; 
+    margin-top: 5px;  
+    letter-spacing: 0.5px;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+
+<!-- <div class="top-bar"> မြန်မာပြည်အနှံ့ အိမ်တိုင်ရာရောက် ပို့ဆောင်ပေးနေပါပြီ </div> -->
+
+<header>
+<h1>Selena ACCESSORIES</h1>
+<p>Handcrafted Elegance for You</p><br>
+<p>At Selena Accessories, we can have customers design and have them make their own. We offer discounts every month. Every woman should visit Selena Accessories Shop to feel confident and beautiful.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="new In.html">New In</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+<h2> Featured Collections</h2>
+
+<div class="product-grid">
+
+  <!-- Product 1 -->
+  <div class="product-card">
+    <div class="img-container">
+      <img src="a00fa49497b83fa3d41c2da1e4a6c8ba.jpg" alt="Diamond Ring">
+    </div>
+    <h3>Diamond Ring</h3>
+    <p><span class="price">250,000 MMK</span></p>
+    <a href="order.html"><button class="buy-btn">Order</button></a>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card">
+    <div class="img-container">
+      <img src="6dec0658b5147c9b8be5a97c40d0f1cf.jpg" alt="Pearl Necklace">
+    </div>
+    <h3>Pearl Essence Necklace</h3>
+     <p><span class="price">250,000 MMK</span></p>
+    <a href="order.html"><button class="buy-btn">Order</button></a>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card">
+    <div class="img-container">
+      <img src="2a1c9145377ff51437287d46b1de8ad4.jpg" alt="Silver Bracelet">
+    </div>
+    <h3>Modern Silver Bracelet</h3>
+    <p><span class="price">250,000 MMK</span></p>
+    <a href="order.html"><button class="buy-btn">Order</button></a>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card">
+    <div class="img-container">
+      <img src="f1eac44e5a4cb0601369fc7905e179c1.jpg" alt="Diamond Earrings">
+    </div>
+    <h3>Diamond Earrings</h3>
+     <p><span class="price">250,000 MMK</span></p>
+    <a href="order.html"><button class="buy-btn">Order</button></a>
+  </div>
+
+  <div class="product-card">
+    <div class="img-container">
+      <img src="351698b27944941fdfb4b40be20282cf.jpg" alt="Watch">
+    </div>
+    <h3>Watch</h3>
+     <p><span class="price">260,000 MMK</span></p>
+   <a href="order.html"><button class="buy-btn">Order</button></a>
+  </div>
+
+  <div class="product-card">
+    <div class="img-container">
+      <img src="338f0b602c7ee507468582171c2c3b60.jpg" alt="Diamond Set">
+    </div>
+    <h3>Diamond Set</h3>
+     <p><span class="price">250,000 MMK</span></p>
+    <a href="order.html"><button class="buy-btn">Order</button></a>
+  </div>
+
+</div>
+</div>
+<div class="discount">
+    <div class="discount-text">
+        <h1>Discounts!</h1>
+        <p>Start exploring our collections with exclusive offers.</p>
+        <a href="New In.html"><button class="buy-btn">welcome</button></a>
+    </div>
+
+    <img src="f6bd04998877fb03dec6fcd13a45f3b8.jpg" alt="p1">
+</div>
+
+</div>
+
+
+<footer>
+<div class="footer-content">
+
+<div class="footer-section">
+<h4>Selena Accessories</h4>
+<p>Explore our collection of premium jewelry, thoughtfully designed to reflect elegance, beauty, and your unique style.</p>
+</div>
+
+<div class="footer-section">
+<h4>Contact Info</h4>
+<p>Dawei, Myanmar<br>
+Phone: 09 123 456 789<br>
+info@SelenaAccessories.com</p>
+</div>
+<div class="quick">
+    <h4>Quick Link</h4>
+    <div class="lin">
+        <a href="index.html">Home</a>
+        <a href="new In.html">New In</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+<div class="footer-section">
+<h4>Follow Our Journey</h4>
+<div class="social-links">
+<a href="https://www.facebook.com/share/17s2pwzyrR/?mibextid=wwXIfr">Facebook</a>
+<a href="https://www.tiktok.com/@zinpyaelin?is_from_webapp=1&sender_device=pc">TikTok</a>
+<a href="https://www.pinterest.com/">Pinterest</a>
+</div>
+</div>
+
+</div>
+<div class="copyright"> © 2026 Selena Accessories </div>
+    <p class="designer">Designed by Zin Pyae Lin</p>
+</div>
+</footer>
+
+</body>
+</html>

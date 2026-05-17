@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>LUXE | About Us</title>
+    <meta name="description" content="Discover the perfect gift at Selena Accessories. From sparkling earrings and rings to classic watches, find exquisite jewelry for every occasion.">
+    <meta name="keywords" content="Selena Accessories, gift ideas, fine jewelry, statement necklaces, luxury watches, jewelry store, rings and bracelets">
+    <style>
+        /* ===== SAME THEME ===== */
+:root{
+    --primary-gold:#c5a059;
+    --dark-bg:#0f172a;
+    --soft-white:#ffffff;
+    --product-bg:#fdfaf5;
+    --img-bg:#f5efe2;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:#c4A484;
+    color:white;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar{
+    background:#111;
+    padding:8px;
+    text-align:center;
+    font-size:12px;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#f5efe2;
+    text-align:center;
+    padding:40px;
+}
+header h1{
+    letter-spacing:8px;
+    font-size:45px;
+    color:#111;
+}
+header p{
+    color:var(--primary-gold);
+}
+
+/* ===== NAV ===== */
+nav{
+    background:#fffde4;
+    padding:15px;
+    text-align:center;
+}
+nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#111;
+    font-size:13px;
+    letter-spacing:1px;
+}
+nav a:hover{
+    color:var(--primary-gold);
+}
+
+        /* 4. ABOUT GRID (The layout from your image) */
+        .about-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            color: var(--moska-brown);
+            margin-bottom: 25px;
+        }
+        .about-content p {
+            line-height: 1.8;
+            color: #1e1c1c;
+            margin-bottom: 20px;
+        }
+
+        .about-visuals {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            position: relative;
+        }
+        .img-small {
+            width: 40%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .img-arch {
+            width: 55%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 200px 200px 0 0; /* Creates the arch shape in the image */
+        }
+
+        /* 5. FEATURES SECTION (Original Cards logic with Image style) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+            margin: 60px auto;
+            text-align: center;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .feature-box h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .feature-box p {
+            font-size: 14px;
+            color: #131212;
+            padding: 0 20px;
+        }
+
+        /* 6. TEAM SECTION (Original code kept & styled) */
+        .team-container {
+            max-width: 1200px;
+            margin: 80px auto;
+            text-align: center;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .team-member {
+            background: white;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        .team-member img { width: 100%; height: 400px; object-fit: cover; }
+        .team-member h4 { margin: 15px 0 5px; color: #222; }
+        .team-member p { font-size: 14px; color: #888; }
+
+        /* ===== CHOOSE THE TYPE SECTION ===== */
+.choose-type-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.video-box {
+    flex: 1.2;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-box img {
+    width: 100%;
+    display: block;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.type-content {
+    flex: 1;
+}
+
+.type-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.type-content p {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.type-items {
+    display: flex;
+    gap: 15px;
+}
+
+.type-card {
+    flex: 1;
+    background: var(--moska-beige);
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 50px; /* Pill shape from image */
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.type-card:hover {
+    background: var(--moska-brown);
+    color: white;
+}
+
+.type-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+.type-card span {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .choose-type-section { flex-direction: column; }
+    .type-items { flex-wrap: wrap; }
+}
+
+       /* FOOTER */
+footer{
+    background:#f5efe2;
+    text-align:center;
+    padding:60px 20px;
+}
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+}
+.footer-section h4, .quick h4 { color: black; margin-bottom: 20px; }
+.footer-section p, .lin a { color: black; font-size: 14px; text-decoration: none; line-height: 1.8; }
+.social-links a { text-decoration:none; margin:10px; color:#111; }
+.lin a { display: block; }
+.copyright{ margin-top:40px; font-size:12px; color: black }
+.designer {
+    font-size: 12px; 
+    margin-top: 5px;  
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+
+   <body>
+<header>
+<h1>Selena ACCESSORIES</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="new In.html">New In</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+
+    <section class="about-section">
+        <div class="about-content">
+            <h2>The Heart Behind Selena</h2>
+<p>With Love, Selena
+
+Selena Accessories was founded with the idea that beautiful accessories can make a person's day happier. What started as a hobby has now become a trusted companion for fashion lovers.
+
+Accessories not only boost your confidence but also highlight your personality. Each item is carefully selected with love, so you can feel Selena's style wherever you go.</p>
+        </div>
+        <div class="about-visuals">
+            <img src="ae112e36a79e05503a152214c87637c0.jpg" alt="Jewelry" class="img-small">
+            <img src="4fb365c43a399659f97dc97f35fbde0a.jpg" alt="Main" class="img-arch">
+        </div>
+    </section>
+
+    <section class="features-grid">
+        <div class="feature-box">
+            <h3>The purpose</h3>
+<p>Selena's main goal is to create high-quality accessories that are easy to wear in everyday life and make everyone feel confident and beautiful. We always prioritize not only looking stylish but also feeling satisfied when wearing them.</p>
+</div>
+
+        <div class="feature-box">
+            <h3>Values</h3>
+<p>Every creation is based on quality and customer satisfaction. Each accessory is carefully selected for both style and comfort, making fashion simple and enjoyable for everyone.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Why Choose Selena</h3>
+<p>- Trendy & Stylish Designs<br>
+- High-Quality Accessories<br>
+- Affordable Prices<br>
+- Friendly Customer Service <br>
+- Perfect for Everyday Wear</p>
+        </div>
+    </section>
+
+    <div class="team-container">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 35px;">Selena acceesories team members</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="photo_2026-03-19_21-06-00.jpg" alt="p1">
+                <h4>Alice</h4>
+                <p>Lead Designer</p>
+            </div>
+            <div class="team-member">
+                <img src="photo_2026-04-23_14-14-54.jpg" alt="p2">
+                <h4>Nora</h4>
+                <p>Customer Care</p>
+            </div>
+            <div class="team-member">
+                <img src="photo_2026-04-23_14-18-53.jpg" alt="p3">
+                <h4>Clara</h4>
+                <p>Marketing Manager</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="choose-type-section">
+    <div class="video-box">
+        <img src="6fcbf69655a712000a1421c5f4f1779d.jpg" alt="Jewelry Video">
+    </div>
+
+    <div class="type-content">
+        <h2>Choose The Type!</h2>
+        <p>Explore our curated collections of fine jewelry. From elegant rings to timeless necklaces, find the perfect piece for every occasion.</p>
+        
+        <div class="type-items">
+            <a href="rings.html" class="type-card">
+                <img src="1a7ed0b8f3b793eb8eef46ea87493f22.jpg" alt="Ring">
+                <span>Ring</span>
+                <small style="font-size: 10px;">➔</small>
+            </a>
+            
+            <a href="necklaces.html" class="type-card">
+                <img src="cc956157f0c4de549dbec97c996db65d.jpg" alt="Necklace">
+                <span>Necklace</span>
+                <small style="font-size: 10px;">➔</small>
+            </a>
+            
+            <a href="bracelet.html" class="type-card">
+                <img src="edad2d1e32beea4598ebba0f8be4052b.jpg" alt="Bracelet">
+                <span>Bracelet</span>
+                <small style="font-size: 10px;">➔</small>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+<footer>
+<div class="footer-content">
+
+<div class="footer-section">
+<h4>Selena Accessories</h4>
+<p>Explore our collection of premium jewelry, thoughtfully designed to reflect elegance, beauty, and your unique style.</p>
+</div>
+
+<div class="footer-section">
+<h4>Contact Info</h4>
+<p>Dawei, Myanmar<br>
+Phone: 09 123 456 789<br>
+info@SelenaAccessories.com</p>
+</div>
+<div class="quick">
+    <h4>Quick Link</h4>
+    <div class="lin">
+        <a href="index.html">Home</a>
+        <a href="new In.html">New In</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+<div class="footer-section">
+<h4>Follow Our Journey</h4>
+<div class="social-links">
+<a href="https://www.facebook.com/share/17s2pwzyrR/?mibextid=wwXIfr">Facebook</a>
+<a href="https://www.tiktok.com/@zinpyaelin?is_from_webapp=1&sender_device=pc">TikTok</a>
+<a href="https://www.pinterest.com/">Pinterest</a>
+</div>
+</div>
+
+</div>
+<div class="copyright"> © 2026 Selena Accessories </div>
+<p class="designer">Designed by Zin Pyae Lin</p>
+</footer>
+
+
+</body>
+</html>
